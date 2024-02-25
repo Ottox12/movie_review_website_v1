@@ -1,0 +1,21 @@
+{# templates/page.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Your Paginated List</h1>
+
+    <table>
+        {# Loop through your paginated items #}
+        {% for item in pagination %}
+            <tr>
+                <td>{{ item.property1 }}</td>
+                <td>{{ item.property2 }}</td>
+                <!-- Add more properties as needed -->
+            </tr>
+        {% endfor %}
+    </table>
+
+    {# Display pagination controls #}
+    {{ knp_pagination_render(pagination) }}
+{% endblock %}

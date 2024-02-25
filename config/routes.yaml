@@ -5,3 +5,26 @@ controllers:
 kernel:
     resource: ../src/Kernel.php
     type: annotation
+
+# config/routes.yaml
+
+page:
+    path: /page
+    controller: App\Controller\PageController::index
+
+list_movie:
+    path: /movies/api
+    controller: 'App\Controller\MovieController::listMovie'
+    methods: [ 'GET' ]
+
+create_movie:
+        path: /api/movies
+        controller: 'App\Controller\MovieController::createMovie'
+        methods: [ 'POST' ]
+
+update_movie:
+    path: /api/movies/{id}
+    controller: 'App\Controller\MovieController::updateMovie'
+    methods: ['PUT']
+
+
